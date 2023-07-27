@@ -1,0 +1,9 @@
+<archetype>
+  <id>Chess</id>
+  <sources>
+    <from>src/main/java/App.java</from>
+  </sources>
+  <testSources>
+    <from>src/test/java/AppTest.java</from>
+  </testSources>
+</archetype>
