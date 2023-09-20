@@ -12,6 +12,11 @@ public class InputCoordinates {
 
     private static final Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Method requests the coordinates of the piece.
+     * Then do all validations for this input.
+     * @return Coordinates if input corresponds to square on the board
+     */
     public static Coordinates input() {
         while (true) {
             System.out.println("Choose a piece");
@@ -49,6 +54,14 @@ public class InputCoordinates {
         }
     }
 
+    /**
+     * Making further validation of the Coordinates.
+     * Take in account board and color.
+     * @param color of side which have to make a move
+     * @param board current board
+     * @return Coordinates if the square contains a piece of required color
+     * and if that piece has available moves
+     */
     public static Coordinates inputCoordinatesAccordingToPiece(Color color, Board board) {
         while (true) {
             Coordinates coordinates = input();
@@ -75,6 +88,13 @@ public class InputCoordinates {
         }
     }
 
+    /**
+     * Make sure that chosen move can be performed.
+     * @param board current board
+     * @param color of side which have to make a move
+     * @param renderer which render the board after choosing a piece
+     * @return Move that contains source and destination coordinates
+     */
     public static Move inputMove(Board board,  Color color, BoardConsoleRender renderer) {
 
         while (true) {
@@ -105,6 +125,11 @@ public class InputCoordinates {
         return copy.isSquareUnderAttack(king.coordinates, color.opposite());
     }
 
+    /**
+     * Requests destination square for a move.
+     * @param moves available moves
+     * @return Coordinates if the destination square is valid and player can make this move
+     */
     public static Coordinates getAvailableMoves(Set<Coordinates> moves) {
         while (true) {
             Coordinates coordinates = input();

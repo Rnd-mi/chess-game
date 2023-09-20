@@ -13,6 +13,10 @@ import java.util.Map;
 public class Board {
     public final String startingFen;
     private final Map<Coordinates, Piece> board = new HashMap<>();
+
+    /**
+     * List containing all moves that have been done in the game
+     */
     public final List<Move> moves = new ArrayList<>();
 
     public Board(String startingFen) {
@@ -68,6 +72,12 @@ public class Board {
         return result;
     }
 
+    /**
+     * This method's purpose is to find King on current board.
+     * @param name
+     * @param color
+     * @return piece that contains coordinates
+     */
     public Piece findPiece(String name, Color color) {
         List<Piece> piecesOfColor = getPiecesByColor(color);
 
@@ -78,7 +88,6 @@ public class Board {
         }
         throw new RuntimeException();
     }
-
 
     public void undoMove(Move move) {
         setPiece(move.from, board.get(move.to));

@@ -24,6 +24,12 @@ public abstract class LongRangePiece extends Piece {
         }
     }
 
+    /**
+     * The LongRangePieces can move to a square only if all preceding squares are empty
+     * @param coordinates of destination square
+     * @param board current board
+     * @return true if square is available for attack
+     */
     @Override
     protected boolean isSquareAvailableForAttack(Coordinates coordinates, Board board) {
             List<Coordinates> squaresBetween;
