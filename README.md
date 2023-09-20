@@ -1,5 +1,4 @@
-# chess-game
-OOP console chess without castling
+# OOP console chess without castling
 
 ![ezgif com-crop (2)](https://github.com/Rnd-mi/chess-game/assets/124258830/519d7c75-c4dd-485d-8ddc-618893aa2fb2)
 
